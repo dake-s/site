@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start in Poland</title>
+<meta name="description" content="Гид для иностранных студентов, которые только приехали в Польшу">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a href="#top" class="logo"><span class="logo-mark">PL</span><span>Start in Poland</span></a>
+    <nav class="nav" id="nav"></nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <span class="badge" id="hero-badge"></span>
+      <h1 id="hero-title"></h1>
+      <p class="lead" id="hero-lead"></p>
+      <div class="hero-actions">
+        <a href="#checklist" class="btn btn-primary" id="hero-cta"></a>
+        <a href="#docs" class="btn btn-ghost" id="hero-cta2"></a>
+      </div>
+      <div class="hero-progress" id="hero-progress"></div>
+    </div>
+  </section>
+
+  <div id="sections"></div>
+
+  <section class="section" id="checklist">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2 id="check-title"></h2>
+        <p id="check-intro"></p>
+      </div>
+      <div class="progress">
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        <span class="progress-label" id="progress-label"></span>
+      </div>
+      <div class="check-groups" id="check-groups"></div>
+      <button type="button" class="btn btn-ghost btn-small" id="check-reset"></button>
+    </div>
+  </section>
+
+  <section class="section section-sos" id="sos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2 id="sos-title"></h2>
+        <p id="sos-intro"></p>
+      </div>
+      <div class="sos-grid" id="sos-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p id="footer-note"></p>
+    <p class="muted" id="footer-updated"></p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
