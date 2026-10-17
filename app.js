@@ -122,6 +122,21 @@
       .join("");
   };
 
+  const renderCities = () => {
+    const ui = CITY_UI[lang];
+    $("cities-title").textContent = ui.sectionTitle;
+    $("cities-intro").textContent = ui.sectionIntro;
+    $("city-grid").innerHTML = CITIES.map(
+      (city) => `
+        <a class="city-card" href="cities/${city.slug}/">
+          <span class="card-tag">${escape(city.region[lang])}</span>
+          <h3>${escape(city.name[lang])}</h3>
+          <p>${escape(city.about[lang])}</p>
+          <span class="card-link">${escape(ui.open)} →</span>
+        </a>`
+    ).join("");
+  };
+
   const renderFooter = (t) => {
     $("footer-note").textContent = t.footer.note;
     $("footer-updated").textContent = t.footer.updated;
@@ -137,6 +152,7 @@
     renderNav(t);
     renderHero(t);
     renderSections(t);
+    renderCities();
     renderChecklist(t);
     renderSos(t);
     renderFooter(t);

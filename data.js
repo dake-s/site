@@ -1,6 +1,6 @@
 const CONTENT = {
   ru: {
-    nav: { docs: "Документы", life: "Быт", health: "Здоровье", checklist: "Чек-лист", sos: "SOS" },
+    nav: { docs: "Документы", life: "Быт", health: "Здоровье", cities: "Города", checklist: "Чек-лист", sos: "SOS" },
     hero: {
       badge: "Для студентов, которые только приехали",
       title: "Первые недели в Польше без паники",
@@ -237,7 +237,7 @@ const CONTENT = {
   },
 
   en: {
-    nav: { docs: "Documents", life: "Daily life", health: "Health", checklist: "Checklist", sos: "SOS" },
+    nav: { docs: "Documents", life: "Daily life", health: "Health", cities: "Cities", checklist: "Checklist", sos: "SOS" },
     hero: {
       badge: "For students who just arrived",
       title: "Your first weeks in Poland, without the panic",

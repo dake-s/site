@@ -13,7 +13,7 @@
 <body>
 <header class="topbar">
   <div class="wrap topbar-inner">
-    <a href="#top" class="logo"><span class="logo-mark">PL</span><span>Start in Poland</span></a>
+    <a href="#top" class="logo"><span class="logo-mark"><span>PL</span></span><span>Start in Poland</span></a>
     <nav class="nav" id="nav"></nav>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="ru">RU</button>
@@ -38,10 +38,21 @@
 
   <div id="sections"></div>
 
-  <section class="section" id="checklist">
+  <section class="section" id="cities">
     <div class="wrap">
       <div class="section-head">
         <span class="section-num">04</span>
+        <h2 id="cities-title"></h2>
+        <p id="cities-intro"></p>
+      </div>
+      <div class="city-grid" id="city-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="checklist">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">05</span>
         <h2 id="check-title"></h2>
         <p id="check-intro"></p>
       </div>
@@ -57,7 +68,7 @@
   <section class="section section-sos" id="sos">
     <div class="wrap">
       <div class="section-head">
-        <span class="section-num">05</span>
+        <span class="section-num">06</span>
         <h2 id="sos-title"></h2>
         <p id="sos-intro"></p>
       </div>
@@ -74,6 +85,7 @@
 </footer>
 
 <script src="data.js"></script>
+<script src="cities.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
