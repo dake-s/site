@@ -16,6 +16,13 @@ const CITY_UI = {
     healthText: "Договор о добровольной страховке NFZ подписывается в отделении NFZ этого воеводства.",
     healthLink: "Отделение NFZ",
     tips: "Полезно знать",
+    events: "Ежегодные события",
+    eventsIntro: "Даты меняются каждый год — точное время смотри на сайте события. Плюс в мае во всех студенческих городах проходят Ювеналии (Juwenalia) — студенческие фестивали с концертами.",
+    districts: "Районы, популярные у студентов",
+    arrive: "Как добраться",
+    airport: "Аэропорт",
+    station: "Главный вокзал",
+    types: { esports: "Киберспорт", music: "Музыка", film: "Кино", culture: "Культура", science: "Наука", games: "Игры", food: "Еда и праздники" },
     others: "Другие города",
     general: "Общие шаги для всей Польши — на главной странице.",
     generalLink: "Перейти к чек-листу"
@@ -37,6 +44,13 @@ const CITY_UI = {
     healthText: "The voluntary NFZ insurance contract is signed at the NFZ branch of this voivodeship.",
     healthLink: "NFZ branch",
     tips: "Good to know",
+    events: "Annual events",
+    eventsIntro: "Dates change every year — check the event's website. Also, every May all student cities hold Juwenalia — student festivals with concerts.",
+    districts: "Districts popular with students",
+    arrive: "Getting there",
+    airport: "Airport",
+    station: "Main station",
+    types: { esports: "Esports", music: "Music", film: "Film", culture: "Culture", science: "Science", games: "Games", food: "Food & holidays" },
     others: "Other cities",
     general: "Steps that apply to all of Poland are on the main page.",
     generalLink: "Go to the checklist"
@@ -46,6 +60,9 @@ const CITY_UI = {
 const CITIES = [
   {
     slug: "warszawa",
+    districts: ["Ochota", "Mokotów", "Śródmieście", "Wola", "Praga-Południe"],
+    arrive: {"airport": "Lotnisko Chopina (WAW), Warszawa-Modlin (WMI)", "station": "Warszawa Centralna"},
+    events: [{"type": "culture", "name": "Noc Muzeów", "month": {"ru": "Май", "en": "May"}, "about": {"ru": "Ночь, когда музеи открыты бесплатно или почти бесплатно до поздней ночи.", "en": "A night when museums stay open late for free or almost free."}}, {"type": "science", "name": "Festiwal Nauki", "month": {"ru": "Сентябрь", "en": "September"}, "about": {"ru": "Большой фестиваль науки: лекции, лаборатории и мастер-классы от вузов.", "en": "A big science festival: lectures, labs and workshops by universities."}}, {"type": "music", "name": "Unsound", "month": {"ru": "Октябрь", "en": "October"}, "about": {"ru": "Фестиваль экспериментальной и электронной музыки; в 2026 прошёл в Варшаве и Кракове.", "en": "Experimental and electronic music festival; in 2026 it ran in Warsaw and Kraków."}}, {"type": "film", "name": "Warszawski Festiwal Filmowy", "month": {"ru": "Октябрь", "en": "October"}, "about": {"ru": "Главный кинофестиваль столицы с премьерами со всего мира.", "en": "The capital's main film festival with premieres from around the world."}}],
     name: { ru: "Варшава", en: "Warsaw" },
     local: "Warszawa",
     region: { ru: "Мазовецкое", en: "Masovian" },
@@ -72,6 +89,9 @@ const CITIES = [
   },
   {
     slug: "krakow",
+    districts: ["Krowodrza", "Kazimierz", "Podgórze", "Czarna Wieś", "Nowa Huta"],
+    arrive: {"airport": "Kraków Airport (KRK), Balice", "station": "Kraków Główny"},
+    events: [{"type": "esports", "name": "IEM Kraków (CS2)", "month": {"ru": "Начало года", "en": "Early in the year"}, "about": {"ru": "Легендарный турнир Intel Extreme Masters по Counter-Strike, с 2026 года переехал из Катовице в Tauron Arena Kraków.", "en": "The legendary Intel Extreme Masters Counter-Strike tournament, moved from Katowice to Tauron Arena Kraków in 2026."}}, {"type": "culture", "name": "Noc Muzeów", "month": {"ru": "Май", "en": "May"}, "about": {"ru": "Музеи Кракова открыты до ночи, многие бесплатно.", "en": "Kraków's museums open late, many for free."}}, {"type": "food", "name": "Wianki", "month": {"ru": "Июнь", "en": "June"}, "about": {"ru": "Праздник летнего солнцестояния у Вавеля с концертом и венками на Висле.", "en": "Midsummer celebration by Wawel with a concert and wreaths on the Vistula."}}, {"type": "music", "name": "Unsound", "month": {"ru": "Октябрь", "en": "October"}, "about": {"ru": "Знаменитый фестиваль экспериментальной музыки, родом из Кракова.", "en": "The famous experimental music festival that started in Kraków."}}, {"type": "food", "name": "Jarmark Bożonarodzeniowy", "month": {"ru": "Декабрь", "en": "December"}, "about": {"ru": "Рождественская ярмарка на Главной площади.", "en": "Christmas market on the Main Square."}}],
     name: { ru: "Краков", en: "Kraków" },
     local: "Kraków",
     region: { ru: "Малопольское", en: "Lesser Poland" },
@@ -98,6 +118,9 @@ const CITIES = [
   },
   {
     slug: "wroclaw",
+    districts: ["Plac Grunwaldzki", "Nadodrze", "Krzyki", "Śródmieście", "Biskupin"],
+    arrive: {"airport": "Wrocław Airport (WRO)", "station": "Wrocław Główny"},
+    events: [{"type": "culture", "name": "SURVIVAL", "month": {"ru": "Июнь", "en": "June"}, "about": {"ru": "Фестиваль современного искусства в необычных местах города.", "en": "Contemporary art festival in unusual places around the city."}}, {"type": "film", "name": "Nowe Horyzonty", "month": {"ru": "Конец июля — август", "en": "Late July — August"}, "about": {"ru": "Один из крупнейших кинофестивалей Польши: сотни фильмов за 10 дней.", "en": "One of Poland's biggest film festivals: hundreds of films in 10 days."}}, {"type": "food", "name": "Jarmark Bożonarodzeniowy", "month": {"ru": "Декабрь", "en": "December"}, "about": {"ru": "Одна из самых больших рождественских ярмарок в Польше.", "en": "One of the biggest Christmas markets in Poland."}}],
     name: { ru: "Вроцлав", en: "Wrocław" },
     local: "Wrocław",
     region: { ru: "Нижнесилезское", en: "Lower Silesian" },
@@ -124,6 +147,9 @@ const CITIES = [
   },
   {
     slug: "gdansk",
+    districts: ["Wrzeszcz", "Oliwa", "Przymorze", "Gdynia Śródmieście", "Sopot"],
+    arrive: {"airport": "Gdańsk Airport (GDN)", "station": "Gdańsk Główny, Gdynia Główna"},
+    events: [{"type": "music", "name": "Open'er Festival", "month": {"ru": "Начало июля", "en": "Early July"}, "about": {"ru": "Крупнейший музыкальный фестиваль Польши в Гдыне с мировыми звёздами.", "en": "Poland's biggest music festival, in Gdynia, with world-class headliners."}}, {"type": "food", "name": "Jarmark św. Dominika", "month": {"ru": "Июль — август", "en": "July — August"}, "about": {"ru": "Огромная ярмарка в старом Гданьске с многовековой историей.", "en": "A huge fair in Gdańsk's old town with centuries of history."}}, {"type": "culture", "name": "Oblężenie Malborka", "month": {"ru": "Июль", "en": "July"}, "about": {"ru": "Реконструкция средневековой осады у замка Мальборк — рядом с Труймястом.", "en": "Medieval siege re-enactment at Malbork Castle, near the Tricity."}}, {"type": "film", "name": "Festiwal Polskich Filmów Fabularnych", "month": {"ru": "Сентябрь", "en": "September"}, "about": {"ru": "Главный фестиваль польского кино в Гдыне.", "en": "The main Polish film festival, in Gdynia."}}],
     name: { ru: "Гданьск (Труймясто)", en: "Gdańsk (Tricity)" },
     local: "Gdańsk",
     region: { ru: "Поморское", en: "Pomeranian" },
@@ -150,6 +176,9 @@ const CITIES = [
   },
   {
     slug: "poznan",
+    districts: ["Jeżyce", "Łazarz", "Wilda", "Winogrady", "Piątkowo"],
+    arrive: {"airport": "Poznań-Ławica (POZ)", "station": "Poznań Główny"},
+    events: [{"type": "music", "name": "Ethno Port", "month": {"ru": "Июнь", "en": "June"}, "about": {"ru": "Фестиваль музыки мира.", "en": "World music festival."}}, {"type": "culture", "name": "Malta Festival", "month": {"ru": "Июнь", "en": "June"}, "about": {"ru": "Международный фестиваль театра и искусства под открытым небом.", "en": "International festival of theatre and open-air art."}}, {"type": "games", "name": "Poznań Game Arena", "month": {"ru": "Осень", "en": "Autumn"}, "about": {"ru": "Крупнейшая игровая выставка Польши: стенды студий, турниры, косплей.", "en": "Poland's biggest gaming expo: studio booths, tournaments, cosplay."}}, {"type": "food", "name": "Imieniny ulicy Święty Marcin", "month": {"ru": "11 ноября", "en": "11 November"}, "about": {"ru": "Городской праздник с парадом и знаменитыми рогаликами świętomarcińskie.", "en": "City celebration with a parade and the famous St. Martin's croissants."}}],
     name: { ru: "Познань", en: "Poznań" },
     local: "Poznań",
     region: { ru: "Великопольское", en: "Greater Poland" },
@@ -176,6 +205,9 @@ const CITIES = [
   },
   {
     slug: "lodz",
+    districts: ["Śródmieście", "Polesie", "Górna", "Widzew", "Bałuty"],
+    arrive: {"airport": "Łódź Airport (LCJ)", "station": "Łódź Fabryczna"},
+    events: [{"type": "culture", "name": "Łódź Design Festival", "month": {"ru": "Весна", "en": "Spring"}, "about": {"ru": "Фестиваль дизайна: выставки, маркеты и лекции.", "en": "Design festival: exhibitions, markets and talks."}}, {"type": "culture", "name": "Festiwal Łódź Czterech Kultur", "month": {"ru": "Осень", "en": "Autumn"}, "about": {"ru": "Фестиваль о многокультурной истории города.", "en": "Festival about the city's multicultural history."}}, {"type": "culture", "name": "Light Move Festival", "month": {"ru": "Осень", "en": "Autumn"}, "about": {"ru": "Световые инсталляции и проекции на зданиях по всему центру.", "en": "Light installations and projections on buildings all over the centre."}}],
     name: { ru: "Лодзь", en: "Łódź" },
     local: "Łódź",
     region: { ru: "Лодзинское", en: "Łódź" },
@@ -202,6 +234,9 @@ const CITIES = [
   },
   {
     slug: "lublin",
+    districts: ["Czechów", "LSM", "Śródmieście", "Rury", "Czuby"],
+    arrive: {"airport": "Lublin Airport (LUZ)", "station": "Lublin Główny"},
+    events: [{"type": "music", "name": "KODY", "month": {"ru": "Май", "en": "May"}, "about": {"ru": "Фестиваль традиционной и авангардной музыки.", "en": "Festival of traditional and avant-garde music."}}, {"type": "culture", "name": "Noc Kultury", "month": {"ru": "Июнь", "en": "June"}, "about": {"ru": "Ночь, когда весь город превращается в сцену.", "en": "One night when the whole city becomes a stage."}}, {"type": "culture", "name": "Carnaval Sztukmistrzów", "month": {"ru": "Июль", "en": "July"}, "about": {"ru": "Фестиваль уличного цирка, канатоходцев и жонглёров.", "en": "Festival of street circus, tightrope walkers and jugglers."}}, {"type": "music", "name": "Re:tradycja", "month": {"ru": "Август", "en": "August"}, "about": {"ru": "Фестиваль традиционной музыки разных народов.", "en": "Festival of traditional music of different nations."}}],
     name: { ru: "Люблин", en: "Lublin" },
     local: "Lublin",
     region: { ru: "Люблинское", en: "Lublin" },
@@ -228,6 +263,9 @@ const CITIES = [
   },
   {
     slug: "katowice",
+    districts: ["Śródmieście", "Ligota", "Załęże", "Brynów", "Osiedle Tysiąclecia"],
+    arrive: {"airport": "Katowice Airport (KTW), Pyrzowice", "station": "Katowice"},
+    events: [{"type": "music", "name": "Tauron Nowa Muzyka", "month": {"ru": "Лето", "en": "Summer"}, "about": {"ru": "Фестиваль электронной и альтернативной музыки.", "en": "Electronic and alternative music festival."}}, {"type": "music", "name": "OFF Festival", "month": {"ru": "Начало августа", "en": "Early August"}, "about": {"ru": "Альтернативный музыкальный фестиваль в Долине Трёх Прудов.", "en": "Alternative music festival in the Three Ponds Valley."}}, {"type": "esports", "name": "ESL Pro League (CS2)", "month": {"ru": "Октябрь 2026", "en": "October 2026"}, "about": {"ru": "Плей-офф ESL Pro League в легендарном Сподке. Сам IEM с 2026 года проходит в Кракове.", "en": "ESL Pro League playoffs in the legendary Spodek. IEM itself moved to Kraków in 2026."}}, {"type": "science", "name": "Śląski Festiwal Nauki", "month": {"ru": "Декабрь", "en": "December"}, "about": {"ru": "Фестиваль науки с лекциями и мастер-классами вузов Силезии.", "en": "Science festival with lectures and workshops by Silesian universities."}}],
     name: { ru: "Катовице", en: "Katowice" },
     local: "Katowice",
     region: { ru: "Силезское", en: "Silesian" },

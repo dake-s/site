@@ -76,6 +76,32 @@
             ${card(ui.transport, city.transport.name, `<ul><li>${escape(ui.transportDiscount)}</li></ul>`, { label: ui.transportLink, url: city.transport.url })}
             ${card(ui.health, "NFZ", `<ul><li>${escape(ui.healthText)}</li></ul>`, { label: ui.healthLink, url: city.nfz })}
             ${card(ui.tips, city.name[lang], list(city.tips[lang]))}
+            ${card(ui.districts, city.local, `<div class="chips chips-static">${city.districts.map((d) => `<span class="chip">${escape(d)}</span>`).join("")}</div>`)}
+            ${card(ui.arrive, city.local, `<ul class="uni-list"><li><strong>${escape(ui.airport)}:</strong> ${escape(city.arrive.airport)}</li><li><strong>${escape(ui.station)}:</strong> ${escape(city.arrive.station)}</li></ul>`)}
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="events">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>${escape(ui.events)}</h2>
+            <p>${escape(ui.eventsIntro)}</p>
+          </div>
+          <div class="events">
+            ${city.events
+              .map(
+                (e) => `
+                <article class="event event-${e.type}">
+                  <div class="event-month">${escape(e.month[lang])}</div>
+                  <div class="event-body">
+                    <span class="event-type">${escape(ui.types[e.type])}</span>
+                    <h3>${escape(e.name)}</h3>
+                    <p>${escape(e.about[lang])}</p>
+                  </div>
+                </article>`
+              )
+              .join("")}
           </div>
           <div class="note">${escape(ui.general)} <a class="card-link" href="${ROOT}#checklist">${escape(ui.generalLink)} →</a></div>
         </div>
